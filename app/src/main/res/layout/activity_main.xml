@@ -82,12 +82,40 @@
         app:srcCompat="@drawable/symbol_adjective" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_pn"
-        android:layout_width="150dp"
+        android:id="@+id/recyclerView1"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSubject1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerView3"
+        app:layout_constraintStart_toEndOf="@+id/recyclerView1"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewVerb" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerView4"
+        app:layout_constraintStart_toEndOf="@+id/recyclerView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNoun" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recyclerView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAdjective" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

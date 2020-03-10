@@ -8,19 +8,27 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var recyclerViewPN: RecyclerView
-    private lateinit var layoutManagerPN: LinearLayoutManager
-    private lateinit var adapter : RecyclerPNAdapter
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
+
+    private var layoutManager2: RecyclerView.LayoutManager? = null
+    private var adapter2: RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        layoutManagerPN = LinearLayoutManager(this)
-        recycler_pn.layoutManager = layoutManagerPN
+        // Setting up recyclerView1
+        layoutManager = LinearLayoutManager(this)
+        recyclerView1.layoutManager = layoutManager
+        adapter = RecyclerAdapter()
+        recyclerView1.adapter = adapter
 
-        adapter = RecyclerPNAdapter()
-        recycler_pn.adapter = adapter
+        // Setting up recyclerView2
+        layoutManager2 = LinearLayoutManager(this)
+        recyclerView2.layoutManager = layoutManager2
+        adapter2 = RecyclerAdapter2()
+        recyclerView2.adapter = adapter2
 
 
     }
