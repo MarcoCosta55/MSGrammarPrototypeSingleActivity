@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     private var layoutManager2: RecyclerView.LayoutManager? = null
     private var adapter2: RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>? = null
 
+    private var layoutManager3: RecyclerView.LayoutManager? = null
+    private var adapter3: RecyclerView.Adapter<RecyclerAdapter3.ViewHolder>? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,6 +32,13 @@ class MainActivity : AppCompatActivity() {
         recyclerView2.layoutManager = layoutManager2
         adapter2 = RecyclerAdapter2()
         recyclerView2.adapter = adapter2
+
+        // Setting up recyclerView3
+        layoutManager3 = LinearLayoutManager(this)
+        recyclerView3.layoutManager = layoutManager3
+        adapter3 = RecyclerAdapter3()
+        recyclerView3.adapter = adapter3
+
 
 
     }

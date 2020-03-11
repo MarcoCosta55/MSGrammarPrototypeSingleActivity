@@ -14,7 +14,6 @@ class RecyclerAdapter3 : RecyclerView.Adapter<RecyclerAdapter3.ViewHolder>() {
         R.drawable.card_n_durazno,
         R.drawable.card_n_ensalada,
         R.drawable.card_n_fresas,
-        R.drawable.card_n_hormiga,
         R.drawable.card_n_mango,
         R.drawable.card_n_manzana,
         R.drawable.card_n_naranja,
