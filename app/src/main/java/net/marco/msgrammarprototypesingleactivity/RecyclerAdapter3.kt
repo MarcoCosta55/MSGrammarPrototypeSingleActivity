@@ -8,19 +8,20 @@ import android.widget.ImageView
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter2 : RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>() {
+class RecyclerAdapter3 : RecyclerView.Adapter<RecyclerAdapter3.ViewHolder>() {
 
     private val images = intArrayOf(
-        R.drawable.card_v_come,
-        R.drawable.card_v_como,
-        R.drawable.card_v_comes,
-        R.drawable.card_v_comemos,
-        R.drawable.card_v_comen,
-        R.drawable.card_v_corto,
-        R.drawable.card_v_cortas,
-        R.drawable.card_v_corta,
-        R.drawable.card_v_cortamos,
-        R.drawable.card_v_cortan
+        R.drawable.card_n_durazno,
+        R.drawable.card_n_ensalada,
+        R.drawable.card_n_fresas,
+        R.drawable.card_n_hormiga,
+        R.drawable.card_n_mango,
+        R.drawable.card_n_manzana,
+        R.drawable.card_n_naranja,
+        R.drawable.card_n_pan,
+        R.drawable.card_n_pera,
+        R.drawable.card_n_pollo,
+        R.drawable.card_n_uvas
     )
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -28,14 +29,14 @@ class RecyclerAdapter2 : RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>() {
         var itemImage: ImageView
 
         init {
-            itemImage = itemView.findViewById(R.id.imageV)
+            itemImage = itemView.findViewById(R.id.imageN)
 
         }
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.card_layout2, viewGroup, false)
+            .inflate(R.layout.card_layout3, viewGroup, false)
         return ViewHolder(v)
     }
 
