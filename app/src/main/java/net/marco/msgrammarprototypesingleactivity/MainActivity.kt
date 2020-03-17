@@ -2,6 +2,7 @@ package net.marco.msgrammarprototypesingleactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     private var layoutManager4: RecyclerView.LayoutManager? = null
     private var adapter4: RecyclerView.Adapter<RecyclerAdapter4.ViewHolder>? = null
 
+    private var pn = findViewById<ImageView>(R.id.imageViewSubject1)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,26 +30,30 @@ class MainActivity : AppCompatActivity() {
         // Setting up recyclerView1
         layoutManager1 = LinearLayoutManager(this)
         recyclerView1.layoutManager = layoutManager1
-        adapter1 = RecyclerAdapter1()
+        adapter1 = RecyclerAdapter1(this)
         recyclerView1.adapter = adapter1
 
         // Setting up recyclerView2
         layoutManager2 = LinearLayoutManager(this)
         recyclerView2.layoutManager = layoutManager2
-        adapter2 = RecyclerAdapter2()
+        adapter2 = RecyclerAdapter2(this)
         recyclerView2.adapter = adapter2
 
         // Setting up recyclerView3
         layoutManager3 = LinearLayoutManager(this)
         recyclerView3.layoutManager = layoutManager3
-        adapter3 = RecyclerAdapter3()
+        adapter3 = RecyclerAdapter3(this)
         recyclerView3.adapter = adapter3
 
         // Setting up recyclerView4
         layoutManager4 = LinearLayoutManager(this)
         recyclerView4.layoutManager = layoutManager4
-        adapter4 = RecyclerAdapter4()
+        adapter4 = RecyclerAdapter4(this)
         recyclerView4.adapter = adapter4
 
+    }
+
+    fun changePN(image: Int){
+        pn.setImageResource(image)
     }
 }

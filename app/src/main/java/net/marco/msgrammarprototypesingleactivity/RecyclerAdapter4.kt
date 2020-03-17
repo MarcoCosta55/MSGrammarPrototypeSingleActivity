@@ -1,14 +1,18 @@
 package net.marco.msgrammarprototypesingleactivity
 
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter4 : RecyclerView.Adapter<RecyclerAdapter4.ViewHolder>() {
+class RecyclerAdapter4(context: Context) : RecyclerView.Adapter<RecyclerAdapter4.ViewHolder>() {
+
+    private val context = context
 
     private val images = intArrayOf(
         R.drawable.card_a_fria,

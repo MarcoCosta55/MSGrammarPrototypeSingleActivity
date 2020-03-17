@@ -1,13 +1,17 @@
 package net.marco.msgrammarprototypesingleactivity
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import net.marco.msgrammarprototypesingleactivity.MainActivity
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter1 : RecyclerView.Adapter<RecyclerAdapter1.ViewHolder>() {
+class RecyclerAdapter1(context: Context) : RecyclerView.Adapter<RecyclerAdapter1.ViewHolder>() {
+
+    private val context = context
 
     private val images = intArrayOf(
         R.drawable.card_pn_luis,
@@ -32,7 +36,11 @@ class RecyclerAdapter1 : RecyclerView.Adapter<RecyclerAdapter1.ViewHolder>() {
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         viewHolder.itemImage.setImageResource(images[i])
+        val imageItem = viewHolder.itemImage
+        imageItem.setOnClickListener {
+            // I can get images in the recyclerview to change just not outside
 
+        }
 
     }
 
