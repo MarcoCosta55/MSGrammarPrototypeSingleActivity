@@ -7,7 +7,7 @@ import android.widget.ImageView
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter1 : RecyclerView.Adapter<RecyclerAdapter1.ViewHolder>() {
 
     private val images = intArrayOf(
         R.drawable.card_pn_luis,
@@ -20,12 +20,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var itemImage: ImageView
+        var itemImage: ImageView = itemView.findViewById(R.id.imagePN)
 
-        init {
-            itemImage = itemView.findViewById(R.id.imagePN)
-
-        }
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -36,11 +32,14 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         viewHolder.itemImage.setImageResource(images[i])
-    }
 
+
+    }
 
     override fun getItemCount(): Int {
         return images.size
     }
+
+
 
 }

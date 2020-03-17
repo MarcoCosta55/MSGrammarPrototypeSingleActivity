@@ -8,8 +8,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
+    private var layoutManager1: RecyclerView.LayoutManager? = null
+    private var adapter1: RecyclerView.Adapter<RecyclerAdapter1.ViewHolder>? = null
 
     private var layoutManager2: RecyclerView.LayoutManager? = null
     private var adapter2: RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>? = null
@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Setting up recyclerView1
-        layoutManager = LinearLayoutManager(this)
-        recyclerView1.layoutManager = layoutManager
-        adapter = RecyclerAdapter()
-        recyclerView1.adapter = adapter
+        layoutManager1 = LinearLayoutManager(this)
+        recyclerView1.layoutManager = layoutManager1
+        adapter1 = RecyclerAdapter1()
+        recyclerView1.adapter = adapter1
 
         // Setting up recyclerView2
         layoutManager2 = LinearLayoutManager(this)
@@ -47,8 +47,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView4.layoutManager = layoutManager4
         adapter4 = RecyclerAdapter4()
         recyclerView4.adapter = adapter4
-
-
 
     }
 }
