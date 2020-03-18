@@ -3,6 +3,7 @@ package net.marco.msgrammarprototypesingleactivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,10 +27,10 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var symbolPN = "ZZZ"
-    private var symbolV = "ZZ"
-    private var symbolN = "ZZZ"
-    private var symbolA = "ZZ"
+    private var symbolPN = "PPP"
+    private var symbolV = "VV"
+    private var symbolN = "NNN"
+    private var symbolA = "AA"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +65,10 @@ class MainActivity : AppCompatActivity(), CardClick {
         noun = findViewById(R.id.imageViewNoun)
         adjective = findViewById(R.id.imageViewAdjective)
 
+        checkWorkButton.setOnClickListener {
+            checkWork()
+        }
+
     }
 
     override fun onClickPN(i: Int) {
@@ -84,5 +89,17 @@ class MainActivity : AppCompatActivity(), CardClick {
     override fun onClickA(i: Int) {
         adjective.setImageResource(CardData.imagesA[i])
         symbolA = CardData.symbolsA[i]
-}
+    }
+
+    private fun checkWork(){
+        if (symbolPN[0] == symbolV[0] && symbolPN[1] == symbolV[1]){
+            if(symbolN[1] == symbolA[0] && (symbolN[2] == symbolA[1] || symbolA[1] == 'X')){
+                Toast.makeText(this, "YOUR WHOLE SENTENCE IS CORRECT!!!", Toast.LENGTH_LONG).show()
+            }else{
+                Toast.makeText(this, "Check your Adjective", Toast.LENGTH_LONG).show()
+            }
+        }else{
+            Toast.makeText(this, "Check your verb", Toast.LENGTH_LONG).show()
+        }
+    }
 }
