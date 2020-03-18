@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity(), CardClick {
 
     }
 
-    override fun onClickPN(image: Int) {
-        properNoun.setImageResource(image)
+    override fun onClickPN(i: Int) {
+        properNoun.setImageResource(CardData.imagesPN[i])
     }
 
     override fun onClickV(image: Int) {
