@@ -10,9 +10,10 @@ import android.widget.Toast
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter3(context: Context) : RecyclerView.Adapter<RecyclerAdapter3.ViewHolder>() {
+class RecyclerAdapter3(context: Context, listener: CardClick) : RecyclerView.Adapter<RecyclerAdapter3.ViewHolder>() {
 
-    private val context = context
+    private val context = context // may not need
+    private var cClick = listener
 
     private val images = intArrayOf(
         R.drawable.card_n_durazno,
@@ -29,12 +30,8 @@ class RecyclerAdapter3(context: Context) : RecyclerView.Adapter<RecyclerAdapter3
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var itemImage: ImageView
+        var itemImage: ImageView = itemView.findViewById(R.id.imageN)
 
-        init {
-            itemImage = itemView.findViewById(R.id.imageN)
-
-        }
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -45,6 +42,10 @@ class RecyclerAdapter3(context: Context) : RecyclerView.Adapter<RecyclerAdapter3
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         viewHolder.itemImage.setImageResource(images[i])
+        val imageItem = viewHolder.itemImage
+        imageItem.setOnClickListener {
+            cClick.onClickN(images[i])
+        }
     }
 
 
