@@ -9,6 +9,7 @@
         android:id="@+id/imageViewSubject1"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView1"
         app:layout_constraintEnd_toStartOf="@+id/imageViewVerb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProperNounSymbol"
@@ -18,6 +19,7 @@
         android:id="@+id/imageViewVerb"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
         app:layout_constraintEnd_toStartOf="@+id/imageViewNoun"
         app:layout_constraintStart_toEndOf="@+id/imageViewSubject1"
         app:layout_constraintTop_toBottomOf="@+id/imageViewVerbSymbol"
@@ -27,6 +29,7 @@
         android:id="@+id/imageViewNoun"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
         app:layout_constraintEnd_toStartOf="@+id/imageViewAdjective"
         app:layout_constraintStart_toEndOf="@+id/imageViewVerb"
         app:layout_constraintTop_toBottomOf="@+id/imageViewNounSymbol"
@@ -36,6 +39,7 @@
         android:id="@+id/imageViewAdjective"
         android:layout_width="0dp"
         android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewNoun"
         app:layout_constraintTop_toBottomOf="@+id/imageViewAdjectiveSymbol"
@@ -45,40 +49,40 @@
         android:id="@+id/imageViewProperNounSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSubject1"
         app:layout_constraintEnd_toStartOf="@+id/imageViewVerbSymbol"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_noun" />
 
     <ImageView
         android:id="@+id/imageViewVerbSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewVerb"
         app:layout_constraintEnd_toStartOf="@+id/imageViewNounSymbol"
         app:layout_constraintStart_toEndOf="@+id/imageViewProperNounSymbol"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_verb" />
 
     <ImageView
         android:id="@+id/imageViewNounSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewNoun"
         app:layout_constraintEnd_toStartOf="@+id/imageViewAdjectiveSymbol"
         app:layout_constraintStart_toEndOf="@+id/imageViewVerbSymbol"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_noun" />
 
     <ImageView
         android:id="@+id/imageViewAdjectiveSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewAdjective"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewNounSymbol"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_adjective" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -117,5 +121,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recyclerView3"
         app:layout_constraintTop_toBottomOf="@+id/imageViewAdjective" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/checkWorkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewAdjectiveSymbol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

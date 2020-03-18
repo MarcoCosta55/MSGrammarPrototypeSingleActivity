@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
+    private var symbolPN = "ZZZ"
+    private var symbolV = "ZZ"
+    private var symbolN = "ZZZ"
+    private var symbolA = "ZZ"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -63,17 +68,21 @@ class MainActivity : AppCompatActivity(), CardClick {
 
     override fun onClickPN(i: Int) {
         properNoun.setImageResource(CardData.imagesPN[i])
+        symbolPN = CardData.symbolsPN[i]
     }
 
     override fun onClickV(i: Int) {
         verb.setImageResource(CardData.imagesV[i])
+        symbolV = CardData.symbolsV[i]
     }
 
     override fun onClickN(i: Int) {
         noun.setImageResource(CardData.imagesN[i])
+        symbolN = CardData.symbolsN[i]
     }
 
     override fun onClickA(i: Int) {
         adjective.setImageResource(CardData.imagesA[i])
-    }
+        symbolA = CardData.symbolsA[i]
+}
 }
