@@ -65,15 +65,15 @@ class MainActivity : AppCompatActivity(), CardClick {
         properNoun.setImageResource(CardData.imagesPN[i])
     }
 
-    override fun onClickV(image: Int) {
-        verb.setImageResource(image)
+    override fun onClickV(i: Int) {
+        verb.setImageResource(CardData.imagesV[i])
     }
 
-    override fun onClickN(image: Int) {
-        noun.setImageResource(image)
+    override fun onClickN(i: Int) {
+        noun.setImageResource(CardData.imagesN[i])
     }
 
-    override fun onClickA(image: Int) {
-        adjective.setImageResource(image)
+    override fun onClickA(i: Int) {
+        adjective.setImageResource(CardData.imagesA[i])
     }
 }

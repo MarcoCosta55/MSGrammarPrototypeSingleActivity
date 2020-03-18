@@ -15,18 +15,7 @@ class RecyclerAdapter3(context: Context, listener: CardClick) : RecyclerView.Ada
     private val context = context // may not need
     private var cClick = listener
 
-    private val images = intArrayOf(
-        R.drawable.card_n_durazno,
-        R.drawable.card_n_ensalada,
-        R.drawable.card_n_fresas,
-        R.drawable.card_n_mango,
-        R.drawable.card_n_manzana,
-        R.drawable.card_n_naranja,
-        R.drawable.card_n_pan,
-        R.drawable.card_n_pera,
-        R.drawable.card_n_pollo,
-        R.drawable.card_n_uvas
-    )
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -41,16 +30,16 @@ class RecyclerAdapter3(context: Context, listener: CardClick) : RecyclerView.Ada
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemImage.setImageResource(images[i])
+        viewHolder.itemImage.setImageResource(CardData.imagesN[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
-            cClick.onClickN(images[i])
+            cClick.onClickN(i)
         }
     }
 
 
     override fun getItemCount(): Int {
-        return images.size
+        return CardData.imagesN.size
     }
 
 }
