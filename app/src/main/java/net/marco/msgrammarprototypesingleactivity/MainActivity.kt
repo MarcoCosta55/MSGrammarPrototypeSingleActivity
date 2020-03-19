@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), CardClick {
     private var symbolN = "NNN"
     private var symbolA = "AA"
 
-    private var mediaPlayer: MediaPlayer? = null
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -102,7 +102,8 @@ class MainActivity : AppCompatActivity(), CardClick {
                 Toast.makeText(this, "Check your Adjective", Toast.LENGTH_LONG).show()
             }
         }else{
-            mediaPlayer = MediaPlayer.create(this, R.drawable.card_a_verdes)
+            mediaPlayer = MediaPlayer.create(this, R.raw.r)
+            mediaPlayer.start()
             Toast.makeText(this, "Check your verb", Toast.LENGTH_LONG).show()
         }
     }
