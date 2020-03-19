@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import net.marco.msgrammarprototypesingleactivity.MainActivity
 
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,7 +15,7 @@ class RecyclerAdapter1(context: Context, listener: CardClick) : RecyclerView.Ada
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var itemImage: ImageView = itemView.findViewById(R.id.imagePN)
+        var itemImage: ImageView = itemView.findViewById(R.id.imageP)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
@@ -29,15 +28,15 @@ class RecyclerAdapter1(context: Context, listener: CardClick) : RecyclerView.Ada
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
 
-        viewHolder.itemImage.setImageResource(CardData.imagesPN[i])
+        viewHolder.itemImage.setImageResource(CardData.imagesP[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
-            cClick.onClickPN(i)
+            cClick.onClickP(i)
         }
     }
 
     override fun getItemCount(): Int {
-        return CardData.imagesPN.size
+        return CardData.imagesP.size
     }
 
 

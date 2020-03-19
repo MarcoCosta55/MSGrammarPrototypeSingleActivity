@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <ImageView
         android:id="@+id/imageViewSubject1"
@@ -13,7 +14,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageViewVerb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProperNounSymbol"
-        app:srcCompat="@drawable/outline_proper_noun" />
+        app:srcCompat="@drawable/outline_pronoun" />
 
     <ImageView
         android:id="@+id/imageViewVerb"
@@ -49,44 +50,44 @@
         android:id="@+id/imageViewProperNounSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewSubject1"
         app:layout_constraintEnd_toStartOf="@+id/imageViewVerbSymbol"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/symbol_noun" />
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
+        app:srcCompat="@drawable/symbol_pronoun" />
 
     <ImageView
         android:id="@+id/imageViewVerbSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewVerb"
         app:layout_constraintEnd_toStartOf="@+id/imageViewNounSymbol"
         app:layout_constraintStart_toEndOf="@+id/imageViewProperNounSymbol"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_verb" />
 
     <ImageView
         android:id="@+id/imageViewNounSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewNoun"
         app:layout_constraintEnd_toStartOf="@+id/imageViewAdjectiveSymbol"
         app:layout_constraintStart_toEndOf="@+id/imageViewVerbSymbol"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_noun" />
 
     <ImageView
         android:id="@+id/imageViewAdjectiveSymbol"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewAdjective"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewNounSymbol"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWorkButton"
         app:srcCompat="@drawable/symbol_adjective" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -133,12 +134,39 @@
         android:id="@+id/checkWorkButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="2dp"
         android:clickable="true"
+        app:backgroundTint="#4CAF50"
         app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewAdjectiveSymbol"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/readButton"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/checkbox_on_background" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/readButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewVerbSymbol"
+        app:layout_constraintEnd_toStartOf="@+id/checkWorkButton"
+        app:layout_constraintStart_toEndOf="@+id/menuButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewProperNounSymbol"
+        app:layout_constraintEnd_toStartOf="@+id/readButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_dialer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
