@@ -1,5 +1,6 @@
 package net.marco.msgrammarprototypesingleactivity
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity(), CardClick {
     private var symbolV = "VV"
     private var symbolN = "NNN"
     private var symbolA = "AA"
+
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
