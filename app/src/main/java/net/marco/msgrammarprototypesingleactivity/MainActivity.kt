@@ -97,12 +97,16 @@ class MainActivity : AppCompatActivity(), CardClick {
     private fun checkWork(){
         if (symbolP[0] == symbolV[0] && symbolP[1] == symbolV[1]){
             if(symbolN[1] == symbolA[0] && (symbolN[2] == symbolA[1] || symbolA[1] == 'X')){
+                mediaPlayer = MediaPlayer.create(this, R.raw.correct)
+                mediaPlayer.start()
                 Toast.makeText(this, "YOUR WHOLE SENTENCE IS CORRECT!!!", Toast.LENGTH_LONG).show()
             }else{
+                mediaPlayer = MediaPlayer.create(this, R.raw.error_a2)
+                mediaPlayer.start()
                 Toast.makeText(this, "Check your Adjective", Toast.LENGTH_LONG).show()
             }
         }else{
-            mediaPlayer = MediaPlayer.create(this, R.raw.r)
+            mediaPlayer = MediaPlayer.create(this, R.raw.error_2)
             mediaPlayer.start()
             Toast.makeText(this, "Check your verb", Toast.LENGTH_LONG).show()
         }
