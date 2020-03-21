@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity(), CardClick {
     private var layoutManager4: RecyclerView.LayoutManager? = null
     private var adapter4: RecyclerView.Adapter<RecyclerAdapter4.ViewHolder>? = null
 
-    private lateinit var properNoun: ImageView
+    private lateinit var pronoun: ImageView
     private lateinit var verb: ImageView
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var symbolPN = "PPP"
+    private var symbolP = "PPP"
     private var symbolV = "VV"
     private var symbolN = "NNN"
     private var symbolA = "AA"
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), CardClick {
         adapter4 = RecyclerAdapter4(this, this)
         recyclerView4.adapter = adapter4
 
-        properNoun = findViewById(R.id.imageViewSubject1)
+        pronoun = findViewById(R.id.imageViewSubject1)
         verb = findViewById(R.id.imageViewVerb)
         noun = findViewById(R.id.imageViewNoun)
         adjective = findViewById(R.id.imageViewAdjective)
@@ -74,9 +74,9 @@ class MainActivity : AppCompatActivity(), CardClick {
 
     }
 
-    override fun onClickPN(i: Int) {
-        properNoun.setImageResource(CardData.imagesPN[i])
-        symbolPN = CardData.symbolsPN[i]
+    override fun onClickP(i: Int) {
+        pronoun.setImageResource(CardData.imagesP[i])
+        symbolP = CardData.symbolsP[i]
     }
 
     override fun onClickV(i: Int) {
@@ -95,14 +95,18 @@ class MainActivity : AppCompatActivity(), CardClick {
     }
 
     private fun checkWork(){
-        if (symbolPN[0] == symbolV[0] && symbolPN[1] == symbolV[1]){
+        if (symbolP[0] == symbolV[0] && symbolP[1] == symbolV[1]){
             if(symbolN[1] == symbolA[0] && (symbolN[2] == symbolA[1] || symbolA[1] == 'X')){
+                mediaPlayer = MediaPlayer.create(this, R.raw.correct)
+                mediaPlayer.start()
                 Toast.makeText(this, "YOUR WHOLE SENTENCE IS CORRECT!!!", Toast.LENGTH_LONG).show()
             }else{
+                mediaPlayer = MediaPlayer.create(this, R.raw.error_a2)
+                mediaPlayer.start()
                 Toast.makeText(this, "Check your Adjective", Toast.LENGTH_LONG).show()
             }
         }else{
-            mediaPlayer = MediaPlayer.create(this, R.raw.r)
+            mediaPlayer = MediaPlayer.create(this, R.raw.error_2)
             mediaPlayer.start()
             Toast.makeText(this, "Check your verb", Toast.LENGTH_LONG).show()
         }

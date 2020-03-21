@@ -1,5 +1,7 @@
 package net.marco.msgrammarprototypesingleactivity
 
+import androidx.core.util.rangeTo
+
 /**
  * This class is a simple data helper class.
  * It will be replaced by a database in the full version of the app.
@@ -24,6 +26,42 @@ class CardData {
             "3SM",
             "3SF",
             "3PM",
+            "3PF",
+            "3PM"
+        )
+
+        /**
+         * data for pronoun cards
+         */
+        val imagesP = intArrayOf(
+            R.drawable.card_p_yof,
+            R.drawable.card_p_yom,
+            R.drawable.card_p_tuf,
+            R.drawable.card_p_tum,
+            R.drawable.card_p_el,
+            R.drawable.card_p_ella,
+            R.drawable.card_p_ustedf,
+            R.drawable.card_p_ustedm,
+            R.drawable.card_p_nosotros,
+            R.drawable.card_p_nosotras,
+            R.drawable.card_p_ellos,
+            R.drawable.card_p_ellas,
+            R.drawable.card_p_ustedesf,
+            R.drawable.card_p_ustedesm
+        )
+        val symbolsP = arrayOf(
+            "1SF",
+            "1SM",
+            "2SF",
+            "2SM",
+            "3SM",
+            "3SF",
+            "3SF",
+            "3SM",
+            "1PM",
+            "1PF",
+            "3PM",
+            "3PF",
             "3PF",
             "3PM"
         )
