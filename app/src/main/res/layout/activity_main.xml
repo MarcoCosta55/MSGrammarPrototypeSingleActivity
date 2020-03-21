@@ -7,10 +7,10 @@
     android:background="#FFFFFF">
 
     <ImageView
-        android:id="@+id/imageViewSubject1"
+        android:id="@+id/imageViewPronoun"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView1"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toStartOf="@+id/imageViewVerb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewPronounSymbol"
@@ -20,9 +20,9 @@
         android:id="@+id/imageViewVerb"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toStartOf="@+id/imageViewNoun"
-        app:layout_constraintStart_toEndOf="@+id/imageViewSubject1"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPronoun"
         app:layout_constraintTop_toBottomOf="@+id/imageViewVerbSymbol"
         app:srcCompat="@drawable/outline_verb1" />
 
@@ -30,7 +30,7 @@
         android:id="@+id/imageViewNoun"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toStartOf="@+id/imageViewAdjective"
         app:layout_constraintStart_toEndOf="@+id/imageViewVerb"
         app:layout_constraintTop_toBottomOf="@+id/imageViewNounSymbol"
@@ -40,7 +40,7 @@
         android:id="@+id/imageViewAdjective"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView4"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewNoun"
         app:layout_constraintTop_toBottomOf="@+id/imageViewAdjectiveSymbol"
@@ -51,7 +51,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewSubject1"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPronoun"
         app:layout_constraintEnd_toStartOf="@+id/imageViewVerbSymbol"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
@@ -91,44 +91,44 @@
         app:srcCompat="@drawable/symbol_adjective" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView1"
+        android:id="@+id/recyclerViewPronoun"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerView2"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerViewVerb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSubject1" />
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
+        android:id="@+id/recyclerViewVerb"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerView3"
-        app:layout_constraintStart_toEndOf="@+id/recyclerView1"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewVerb" />
+        app:layout_constraintEnd_toStartOf="@+id/recyclerViewNoun"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewPronoun"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView3"
+        android:id="@+id/recyclerViewNoun"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recyclerView4"
-        app:layout_constraintStart_toEndOf="@+id/recyclerView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewNoun" />
+        app:layout_constraintEnd_toStartOf="@+id/recyclerViewAdjective"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewVerb"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView4"
+        android:id="@+id/recyclerViewAdjective"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/recyclerView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAdjective" />
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewNoun"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/checkWorkButton"
@@ -138,7 +138,7 @@
         android:layout_marginBottom="4dp"
         android:clickable="true"
         app:backgroundTint="#4CAF50"
-        app:fabSize="normal"
+        app:fabSize="auto"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/readButton"
@@ -151,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="4dp"
-        android:clickable="true"
+        android:clickable="false"
         app:backgroundTint="#FF9800"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toStartOf="@+id/checkWorkButton"
@@ -165,7 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="4dp"
-        android:clickable="true"
+        android:clickable="false"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toStartOf="@+id/readButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -182,5 +182,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkWorkButton" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewPronoun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNoun" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

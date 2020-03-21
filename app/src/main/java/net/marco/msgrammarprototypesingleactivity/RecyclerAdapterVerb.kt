@@ -1,19 +1,17 @@
 package net.marco.msgrammarprototypesingleactivity
 
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter2(context: Context, listener: CardClick) : RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>() {
+class RecyclerAdapterVerb(listener: CardClick) : RecyclerView.Adapter<RecyclerAdapterVerb.ViewHolder>() {
 
-    private val context = context // may not need
     private var cClick = listener
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -22,7 +20,7 @@ class RecyclerAdapter2(context: Context, listener: CardClick) : RecyclerView.Ada
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.card_layout2, viewGroup, false)
+            .inflate(R.layout.card_layout_verb, viewGroup, false)
         return ViewHolder(v)
     }
 

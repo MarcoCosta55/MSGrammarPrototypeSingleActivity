@@ -11,27 +11,32 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), CardClick {
 
-    private var layoutManager1: RecyclerView.LayoutManager? = null
-    private var adapter1: RecyclerView.Adapter<RecyclerAdapter1.ViewHolder>? = null
+    private var layoutManagerPronoun: RecyclerView.LayoutManager? = null
+    private var adapterPronoun: RecyclerView.Adapter<RecyclerAdapterPronoun.ViewHolder>? = null
 
-    private var layoutManager2: RecyclerView.LayoutManager? = null
-    private var adapter2: RecyclerView.Adapter<RecyclerAdapter2.ViewHolder>? = null
+    private var layoutManagerVerb: RecyclerView.LayoutManager? = null
+    private var adapterVerb: RecyclerView.Adapter<RecyclerAdapterVerb.ViewHolder>? = null
 
-    private var layoutManager3: RecyclerView.LayoutManager? = null
-    private var adapter3: RecyclerView.Adapter<RecyclerAdapter3.ViewHolder>? = null
+    private var layoutManagerNoun: RecyclerView.LayoutManager? = null
+    private var adapterNoun: RecyclerView.Adapter<RecyclerAdapterNoun.ViewHolder>? = null
 
-    private var layoutManager4: RecyclerView.LayoutManager? = null
-    private var adapter4: RecyclerView.Adapter<RecyclerAdapter4.ViewHolder>? = null
+    private var layoutManagerAdjective: RecyclerView.LayoutManager? = null
+    private var adapterAdjective: RecyclerView.Adapter<RecyclerAdapterAdjective.ViewHolder>? = null
 
     private lateinit var pronoun: ImageView
     private lateinit var verb: ImageView
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var symbolP = "PPP"
-    private var symbolV = "VV"
-    private var symbolN = "NNN"
-    private var symbolA = "AA"
+    private val SYMBOL_P_RESET = "PPP"
+    private val SYMBOL_V_RESET = "VV"
+    private val SYMBOL_N_RESET = "NNN"
+    private val SYMBOL_A_RESET = "AA"
+
+    private var symbolP = SYMBOL_P_RESET
+    private var symbolV = SYMBOL_V_RESET
+    private var symbolN = SYMBOL_N_RESET
+    private var symbolA = SYMBOL_A_RESET
 
     private lateinit var mediaPlayer: MediaPlayer
 
@@ -39,31 +44,31 @@ class MainActivity : AppCompatActivity(), CardClick {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Setting up recyclerView1
-        layoutManager1 = LinearLayoutManager(this)
-        recyclerView1.layoutManager = layoutManager1
-        adapter1 = RecyclerAdapter1(this, this)
-        recyclerView1.adapter = adapter1
+        // Setting up recyclerViewPronoun
+        layoutManagerPronoun = LinearLayoutManager(this)
+        recyclerViewPronoun.layoutManager = layoutManagerPronoun
+        adapterPronoun = RecyclerAdapterPronoun(this)
+        recyclerViewPronoun.adapter = adapterPronoun
 
-        // Setting up recyclerView2
-        layoutManager2 = LinearLayoutManager(this)
-        recyclerView2.layoutManager = layoutManager2
-        adapter2 = RecyclerAdapter2(this, this)
-        recyclerView2.adapter = adapter2
+        // Setting up recyclerViewVerb
+        layoutManagerVerb = LinearLayoutManager(this)
+        recyclerViewVerb.layoutManager = layoutManagerVerb
+        adapterVerb = RecyclerAdapterVerb(this)
+        recyclerViewVerb.adapter = adapterVerb
 
-        // Setting up recyclerView3
-        layoutManager3 = LinearLayoutManager(this)
-        recyclerView3.layoutManager = layoutManager3
-        adapter3 = RecyclerAdapter3(this, this)
-        recyclerView3.adapter = adapter3
+        // Setting up recyclerViewNoun
+        layoutManagerNoun = LinearLayoutManager(this)
+        recyclerViewNoun.layoutManager = layoutManagerNoun
+        adapterNoun = RecyclerAdapterNoun(this)
+        recyclerViewNoun.adapter = adapterNoun
 
-        // Setting up recyclerView4
-        layoutManager4 = LinearLayoutManager(this)
-        recyclerView4.layoutManager = layoutManager4
-        adapter4 = RecyclerAdapter4(this, this)
-        recyclerView4.adapter = adapter4
+        // Setting up recyclerViewAdjective
+        layoutManagerAdjective = LinearLayoutManager(this)
+        recyclerViewAdjective.layoutManager = layoutManagerAdjective
+        adapterAdjective = RecyclerAdapterAdjective(this)
+        recyclerViewAdjective.adapter = adapterAdjective
 
-        pronoun = findViewById(R.id.imageViewSubject1)
+        pronoun = findViewById(R.id.imageViewPronoun)
         verb = findViewById(R.id.imageViewVerb)
         noun = findViewById(R.id.imageViewNoun)
         adjective = findViewById(R.id.imageViewAdjective)

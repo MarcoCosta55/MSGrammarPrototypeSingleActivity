@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MSGrammarPrototypeSingleActivity</string>
+
+    <string name="pronoun_description">This is a single Pronoun Card</string>
+    <string name="verb_description">This is a single Verb Card</string>
+    <string name="noun_description">This is a single Noun Card</string>
+    <string name="adjective_description">This is a single Adjective Card</string>
 </resources>

@@ -1,44 +1,43 @@
 package net.marco.msgrammarprototypesingleactivity
 
-
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter4(context: Context, listener: CardClick) : RecyclerView.Adapter<RecyclerAdapter4.ViewHolder>() {
+class RecyclerAdapterPronoun(listener: CardClick) : RecyclerView.Adapter<RecyclerAdapterPronoun.ViewHolder>() {
 
-    private val context = context // may not need
+
     private var cClick = listener
-
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var itemImage: ImageView = itemView.findViewById(R.id.imageA)
-
+        var itemImage: ImageView = itemView.findViewById(R.id.imageP)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
+
         val v = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.card_layout4, viewGroup, false)
+            .inflate(R.layout.card_layout_pronoun, viewGroup, false)
+
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemImage.setImageResource(CardData.imagesA[i])
+
+        viewHolder.itemImage.setImageResource(CardData.imagesP[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
-            cClick.onClickA(i)
+            cClick.onClickP(i)
         }
     }
 
-
     override fun getItemCount(): Int {
-        return CardData.imagesA.size
+        return CardData.imagesP.size
     }
+
+
 
 }
