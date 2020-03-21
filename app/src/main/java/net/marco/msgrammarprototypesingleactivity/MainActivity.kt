@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), CardClick {
         setCardResetListeners()
 
         checkWorkButton.setOnClickListener {
-            checkWork.checkVerb(this)
+            checkWork.checkSentence()
         }
     }
 
