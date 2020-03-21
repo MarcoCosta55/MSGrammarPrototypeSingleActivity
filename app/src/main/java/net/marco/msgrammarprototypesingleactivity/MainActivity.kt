@@ -27,19 +27,6 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var verb: ImageView
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
-/**
-    private val SYMBOL_PRONOUN_RESET = "PPP"
-    private val SYMBOL_VERB_RESET = "VV"
-    private val SYMBOL_NOUN_RESET = "NNN"
-    private val SYMBOL_ADJECTIVE_RESET = "AA"
-
-    private var symbolPronoun = SYMBOL_PRONOUN_RESET
-    private var symbolVerb = SYMBOL_VERB_RESET
-    private var symbolNoun = SYMBOL_NOUN_RESET
-    private var symbolAdjective = SYMBOL_ADJECTIVE_RESET
-
-    private lateinit var mediaPlayer: MediaPlayer
-    **/
 
     private var checkWork = CheckWork()
 
@@ -60,7 +47,6 @@ class MainActivity : AppCompatActivity(), CardClick {
         checkWorkButton.setOnClickListener {
             checkWork.checkVerb(this)
         }
-
     }
 
     private fun setRecyclerViews(){
