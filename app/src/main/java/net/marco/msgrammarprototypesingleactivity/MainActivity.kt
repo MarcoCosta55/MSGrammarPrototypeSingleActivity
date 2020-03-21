@@ -28,15 +28,15 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private val SYMBOL_P_RESET = "PPP"
-    private val SYMBOL_V_RESET = "VV"
-    private val SYMBOL_N_RESET = "NNN"
-    private val SYMBOL_A_RESET = "AA"
+    private val SYMBOL_PRONOUN_RESET = "PPP"
+    private val SYMBOL_VERB_RESET = "VV"
+    private val SYMBOL_NOUN_RESET = "NNN"
+    private val SYMBOL_ADJECTIVE_RESET = "AA"
 
-    private var symbolP = SYMBOL_P_RESET
-    private var symbolV = SYMBOL_V_RESET
-    private var symbolN = SYMBOL_N_RESET
-    private var symbolA = SYMBOL_A_RESET
+    private var symbolPronoun = SYMBOL_PRONOUN_RESET
+    private var symbolVerb = SYMBOL_VERB_RESET
+    private var symbolNoun = SYMBOL_NOUN_RESET
+    private var symbolAdjective = SYMBOL_ADJECTIVE_RESET
 
     private lateinit var mediaPlayer: MediaPlayer
 
@@ -77,31 +77,51 @@ class MainActivity : AppCompatActivity(), CardClick {
             checkWork()
         }
 
+        imageViewPronoun.setOnClickListener{
+            pronoun.setImageResource(R.drawable.outline_pronoun)
+            symbolPronoun = SYMBOL_PRONOUN_RESET
+        }
+
+        imageViewVerb.setOnClickListener{
+            verb.setImageResource(R.drawable.outline_verb1)
+            symbolVerb = SYMBOL_VERB_RESET
+        }
+
+        imageViewNoun.setOnClickListener{
+            noun.setImageResource(R.drawable.outline_noun1)
+            symbolNoun = SYMBOL_NOUN_RESET
+        }
+
+        imageViewAdjective.setOnClickListener{
+            adjective.setImageResource(R.drawable.outline_adjective1)
+            symbolAdjective = SYMBOL_ADJECTIVE_RESET
+        }
+
     }
 
     override fun onClickP(i: Int) {
         pronoun.setImageResource(CardData.imagesP[i])
-        symbolP = CardData.symbolsP[i]
+        symbolPronoun = CardData.symbolsP[i]
     }
 
     override fun onClickV(i: Int) {
         verb.setImageResource(CardData.imagesV[i])
-        symbolV = CardData.symbolsV[i]
+        symbolVerb = CardData.symbolsV[i]
     }
 
     override fun onClickN(i: Int) {
         noun.setImageResource(CardData.imagesN[i])
-        symbolN = CardData.symbolsN[i]
+        symbolNoun = CardData.symbolsN[i]
     }
 
     override fun onClickA(i: Int) {
         adjective.setImageResource(CardData.imagesA[i])
-        symbolA = CardData.symbolsA[i]
+        symbolAdjective = CardData.symbolsA[i]
     }
 
     private fun checkWork(){
-        if (symbolP[0] == symbolV[0] && symbolP[1] == symbolV[1]){
-            if(symbolN[1] == symbolA[0] && (symbolN[2] == symbolA[1] || symbolA[1] == 'X')){
+        if (symbolPronoun[0] == symbolVerb[0] && symbolPronoun[1] == symbolVerb[1]){
+            if(symbolNoun[1] == symbolAdjective[0] && (symbolNoun[2] == symbolAdjective[1] || symbolAdjective[1] == 'X')){
                 mediaPlayer = MediaPlayer.create(this, R.raw.correct)
                 mediaPlayer.start()
                 Toast.makeText(this, "YOUR WHOLE SENTENCE IS CORRECT!!!", Toast.LENGTH_LONG).show()
