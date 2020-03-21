@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var verb: ImageView
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
-
+/**
     private val SYMBOL_PRONOUN_RESET = "PPP"
     private val SYMBOL_VERB_RESET = "VV"
     private val SYMBOL_NOUN_RESET = "NNN"
@@ -39,10 +39,31 @@ class MainActivity : AppCompatActivity(), CardClick {
     private var symbolAdjective = SYMBOL_ADJECTIVE_RESET
 
     private lateinit var mediaPlayer: MediaPlayer
+    **/
+
+    private var checkWork = CheckWork()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setRecyclerViews()
+
+        pronoun = findViewById(R.id.imageViewPronoun)
+        verb = findViewById(R.id.imageViewVerb)
+        noun = findViewById(R.id.imageViewNoun)
+        adjective = findViewById(R.id.imageViewAdjective)
+
+        setCardResetListeners()
+
+        checkWorkButton.setOnClickListener {
+            checkWork.checkVerb(this)
+        }
+
+    }
+
+    private fun setRecyclerViews(){
 
         // Setting up recyclerViewPronoun
         layoutManagerPronoun = LinearLayoutManager(this)
@@ -67,73 +88,51 @@ class MainActivity : AppCompatActivity(), CardClick {
         recyclerViewAdjective.layoutManager = layoutManagerAdjective
         adapterAdjective = RecyclerAdapterAdjective(this)
         recyclerViewAdjective.adapter = adapterAdjective
+    }
 
-        pronoun = findViewById(R.id.imageViewPronoun)
-        verb = findViewById(R.id.imageViewVerb)
-        noun = findViewById(R.id.imageViewNoun)
-        adjective = findViewById(R.id.imageViewAdjective)
-
-        checkWorkButton.setOnClickListener {
-            checkWork()
-        }
+    private fun setCardResetListeners(){
 
         imageViewPronoun.setOnClickListener{
             pronoun.setImageResource(R.drawable.outline_pronoun)
-            symbolPronoun = SYMBOL_PRONOUN_RESET
+            checkWork.symbolPronoun = checkWork.SYMBOL_PRONOUN_RESET
         }
 
         imageViewVerb.setOnClickListener{
             verb.setImageResource(R.drawable.outline_verb1)
-            symbolVerb = SYMBOL_VERB_RESET
+            checkWork.symbolVerb = checkWork.SYMBOL_VERB_RESET
         }
 
         imageViewNoun.setOnClickListener{
             noun.setImageResource(R.drawable.outline_noun1)
-            symbolNoun = SYMBOL_NOUN_RESET
+            checkWork.symbolNoun = checkWork.SYMBOL_NOUN_RESET
         }
 
         imageViewAdjective.setOnClickListener{
             adjective.setImageResource(R.drawable.outline_adjective1)
-            symbolAdjective = SYMBOL_ADJECTIVE_RESET
+            checkWork.symbolAdjective = checkWork.SYMBOL_ADJECTIVE_RESET
         }
-
     }
 
+    /**
+     * these four functions override the CardClick interface
+     */
     override fun onClickP(i: Int) {
         pronoun.setImageResource(CardData.imagesP[i])
-        symbolPronoun = CardData.symbolsP[i]
+        checkWork.symbolPronoun = CardData.symbolsP[i]
     }
 
     override fun onClickV(i: Int) {
         verb.setImageResource(CardData.imagesV[i])
-        symbolVerb = CardData.symbolsV[i]
+        checkWork.symbolVerb = CardData.symbolsV[i]
     }
 
     override fun onClickN(i: Int) {
         noun.setImageResource(CardData.imagesN[i])
-        symbolNoun = CardData.symbolsN[i]
+        checkWork.symbolNoun = CardData.symbolsN[i]
     }
 
     override fun onClickA(i: Int) {
         adjective.setImageResource(CardData.imagesA[i])
-        symbolAdjective = CardData.symbolsA[i]
-    }
-
-    private fun checkWork(){
-        if (symbolPronoun[0] == symbolVerb[0] && symbolPronoun[1] == symbolVerb[1]){
-            if(symbolNoun[1] == symbolAdjective[0] && (symbolNoun[2] == symbolAdjective[1] || symbolAdjective[1] == 'X')){
-                mediaPlayer = MediaPlayer.create(this, R.raw.correct)
-                mediaPlayer.start()
-                Toast.makeText(this, "YOUR WHOLE SENTENCE IS CORRECT!!!", Toast.LENGTH_LONG).show()
-            }else{
-                mediaPlayer = MediaPlayer.create(this, R.raw.error_a2)
-                mediaPlayer.start()
-                Toast.makeText(this, "Check your Adjective", Toast.LENGTH_LONG).show()
-            }
-        }else{
-            mediaPlayer = MediaPlayer.create(this, R.raw.error_2)
-            mediaPlayer.start()
-            Toast.makeText(this, "Check your verb", Toast.LENGTH_LONG).show()
-        }
+        checkWork.symbolAdjective = CardData.symbolsA[i]
     }
 }
