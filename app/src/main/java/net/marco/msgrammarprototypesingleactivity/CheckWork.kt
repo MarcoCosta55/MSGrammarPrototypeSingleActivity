@@ -4,9 +4,7 @@ import android.content.Context
 import android.media.MediaPlayer
 import android.widget.Toast
 
-class CheckWork(context: Context) {
-
-    private val context = context
+class CheckWork(private val context: Context) {
 
     private val SYMBOL_PRONOUN_RESET = "PPP"
     private val SYMBOL_VERB_RESET = "VV"
@@ -22,8 +20,8 @@ class CheckWork(context: Context) {
     private val errorAudio1 = R.raw.error_1
     private val errorAudio2 = R.raw.error_2
     private val errorAudio3 = R.raw.error_3
-    private val errorAudioVerb2 = R.raw.error_a2
-    private val errorAudioVerb3 = R.raw.error_a3
+    private val errorAudioVerb2 = R.raw.error_v2
+    private val errorAudioVerb3 = R.raw.error_v3
     private val errorAudioAdjective2 = R.raw.error_a2
     private val errorAudioAdjective3 = R.raw.error_a3
 
@@ -46,8 +44,41 @@ class CheckWork(context: Context) {
 
         if(isVerbCorrect && isAdjectiveCorrect){
             errorCount = 0
-            playMessage(R.raw.correct, correctMessage)
+            playMessage(correctAudio, correctMessage)
         }
+
+        if(!isVerbCorrect && !isAdjectiveCorrect){
+            errorCount++
+            when(errorCount){
+                1 -> playMessage(errorAudio1, errorMessage)
+                2 -> playMessage(errorAudio2, errorMessage)
+                else -> playMessage(errorAudio3, errorMessage)
+            }
+        }
+
+        if(!isVerbCorrect && isAdjectiveCorrect){
+            errorCount++
+            when(errorCount){
+                1 -> playMessage(errorAudio1, errorMessage)
+                2 -> playMessage(errorAudioVerb2, errorMessage)
+                else -> playMessage(errorAudioVerb3, errorMessage)
+            }
+        }
+
+        if(isVerbCorrect && !isAdjectiveCorrect){
+            errorCount++
+            when(errorCount){
+                1 -> playMessage(errorAudio1, errorMessage)
+                2 -> playMessage(errorAudioAdjective2, errorMessage)
+                else -> playMessage(errorAudioAdjective3, errorMessage)
+            }
+        }
+    }
+
+    private fun playMessage(audio: Int, message: String){
+        val mediaPlayer = MediaPlayer.create(context, audio)
+        mediaPlayer.start()
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 
     /**
@@ -84,30 +115,4 @@ class CheckWork(context: Context) {
     fun setAdjective(i: Int){
         symbolAdjective = CardData.symbolsA[i]
     }
-
-
-    private fun playMessage(audio: Int, message: String){
-        val mediaPlayer = MediaPlayer.create(context, audio)
-        mediaPlayer.start()
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
-    }
-
 }
-
-/**
-if (symbolNoun[1] == symbolAdjective[0] && (symbolNoun[2] == symbolAdjective[1] || symbolAdjective[1] == 'X')) {
-mediaPlayer = MediaPlayer.create(context, R.raw.correct)
-mediaPlayer.start()
-Toast.makeText(context, "YOUR WHOLE SENTENCE IS CORRECT!!!", Toast.LENGTH_LONG)
-.show()
-} else {
-mediaPlayer = MediaPlayer.create(context, R.raw.error_a2)
-mediaPlayer.start()
-Toast.makeText(context, "Check your Adjective", Toast.LENGTH_LONG).show()
-}
-} else {
-mediaPlayer = MediaPlayer.create(context, R.raw.error_2)
-mediaPlayer.start()
-Toast.makeText(context, "Check your verb", Toast.LENGTH_LONG).show()
-}
- **/
