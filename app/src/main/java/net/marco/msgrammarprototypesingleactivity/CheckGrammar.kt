@@ -4,7 +4,7 @@ import android.content.Context
 import android.media.MediaPlayer
 import android.widget.Toast
 
-class CheckWork(private val context: Context) {
+class CheckGrammar(private val context: Context) {
 
     private val SYMBOL_PRONOUN_RESET = "PPP"
     private val SYMBOL_VERB_RESET = "VV"
@@ -24,6 +24,8 @@ class CheckWork(private val context: Context) {
     private val errorAudioVerb3 = R.raw.error_v3
     private val errorAudioAdjective2 = R.raw.error_a2
     private val errorAudioAdjective3 = R.raw.error_a3
+
+    private var cardData = CardData()
 
     private val correctMessage = "Your sentence is correct!"
     private val errorMessage = "Check your sentence"
@@ -101,18 +103,18 @@ class CheckWork(private val context: Context) {
     }
 
     fun setPronoun(i: Int){
-        symbolPronoun = CardData.symbolsP[i]
+        symbolPronoun = cardData.symbolsP[i]
     }
 
     fun setVerb(i: Int){
-        symbolVerb = CardData.symbolsV[i]
+        symbolVerb = cardData.symbolsV[i]
     }
 
     fun setNoun(i: Int){
-        symbolNoun = CardData.symbolsN[i]
+        symbolNoun = cardData.symbolsN[i]
     }
 
     fun setAdjective(i: Int){
-        symbolAdjective = CardData.symbolsA[i]
+        symbolAdjective = cardData.symbolsA[i]
     }
 }

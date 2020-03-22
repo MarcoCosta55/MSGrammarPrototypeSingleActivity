@@ -12,6 +12,7 @@ class RecyclerAdapterNoun(listener: CardClick) : RecyclerView.Adapter<RecyclerAd
 
     private var cClick = listener
 
+    private var cardData = CardData()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -26,7 +27,7 @@ class RecyclerAdapterNoun(listener: CardClick) : RecyclerView.Adapter<RecyclerAd
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemImage.setImageResource(CardData.imagesN[i])
+        viewHolder.itemImage.setImageResource(cardData.imagesN[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
             cClick.onClickNoun(i)
@@ -35,7 +36,7 @@ class RecyclerAdapterNoun(listener: CardClick) : RecyclerView.Adapter<RecyclerAd
 
 
     override fun getItemCount(): Int {
-        return CardData.imagesN.size
+        return cardData.imagesN.size
     }
 
 }

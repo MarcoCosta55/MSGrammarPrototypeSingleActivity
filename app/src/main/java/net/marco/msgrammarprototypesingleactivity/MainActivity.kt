@@ -1,14 +1,19 @@
+/**
+ * Copyright 2020 Marco Costa
+ */
+
 package net.marco.msgrammarprototypesingleactivity
 
-import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * This class handles the views for the 2e board (Pronouns and Adjectives)
+ */
 class MainActivity : AppCompatActivity(), CardClick {
 
     private var layoutManagerPronoun: RecyclerView.LayoutManager? = null
@@ -28,7 +33,9 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var checkWork = CheckWork(this)
+    private var cardData = CardData()
+
+    private var checkWork = CheckGrammar(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -103,22 +110,22 @@ class MainActivity : AppCompatActivity(), CardClick {
      * these four functions override the CardClick interface
      */
     override fun onClickPronoun(i: Int) {
-        pronoun.setImageResource(CardData.imagesP[i])
+        pronoun.setImageResource(cardData.imagesP[i])
         checkWork.setPronoun(i)
     }
 
     override fun onClickVerb(i: Int) {
-        verb.setImageResource(CardData.imagesV[i])
+        verb.setImageResource(cardData.imagesV[i])
         checkWork.setVerb(i)
     }
 
     override fun onClickNoun(i: Int) {
-        noun.setImageResource(CardData.imagesN[i])
+        noun.setImageResource(cardData.imagesN[i])
         checkWork.setNoun(i)
     }
 
     override fun onClickAdjective(i: Int) {
-        adjective.setImageResource(CardData.imagesA[i])
+        adjective.setImageResource(cardData.imagesA[i])
         checkWork.setAdjective(i)
     }
 }
