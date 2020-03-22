@@ -50,11 +50,11 @@ class MainActivity : AppCompatActivity(), CardClick {
         setCardResetListeners()
 
         checkWorkButton.setOnClickListener {
-            checkWork.checkSentence(this)
+            checkWork.checkSentence()
         }
 
         readButton.setOnClickListener{
-
+            checkWork.playSentence()
         }
     }
 

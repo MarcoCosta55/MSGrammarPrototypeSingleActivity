@@ -28,7 +28,9 @@ class CheckGrammar(private val context: Context) {
     private val correctMessage = "Your sentence is correct!"
     private val errorMessage = "Check your sentence"
 
-    var isCorrect = false
+    private var sentenceAudio = intArrayOf(0,0,0,0)
+
+    var isSentenceCorrect = false
 
     private var errorCount = 0
 
@@ -40,17 +42,18 @@ class CheckGrammar(private val context: Context) {
         return symbolNoun[1] == symbolAdjective[0] && symbolNoun[2] == symbolAdjective[1]
     }
 
-    fun checkSentence(context: Context) {
+    fun checkSentence() {
         val isVerbCorrect = checkVerb()
         val isAdjectiveCorrect = checkAdjective()
 
         if(isVerbCorrect && isAdjectiveCorrect){
-            isCorrect = true
+            isSentenceCorrect = true
             errorCount = 0
             playMessage(correctAudio, correctMessage)
         }
 
         if(!isVerbCorrect && !isAdjectiveCorrect){
+            isSentenceCorrect = false
             errorCount++
             when(errorCount){
                 1 -> playMessage(errorAudio1, errorMessage)
@@ -60,6 +63,7 @@ class CheckGrammar(private val context: Context) {
         }
 
         if(!isVerbCorrect && isAdjectiveCorrect){
+            isSentenceCorrect = false
             errorCount++
             when(errorCount){
                 1 -> playMessage(errorAudio1, errorMessage)
@@ -69,6 +73,7 @@ class CheckGrammar(private val context: Context) {
         }
 
         if(isVerbCorrect && !isAdjectiveCorrect){
+            isSentenceCorrect = false
             errorCount++
             when(errorCount){
                 1 -> playMessage(errorAudio1, errorMessage)
@@ -78,9 +83,33 @@ class CheckGrammar(private val context: Context) {
         }
     }
 
+    fun playSentence(){
+        if(isSentenceCorrect){
+            var mp1 = MediaPlayer.create(context, sentenceAudio[0])
+            mp1.start()
+            mp1.setOnCompletionListener{
+                var mp2 = MediaPlayer.create(context, sentenceAudio[1])
+                mp2.start()
+                mp2.setOnCompletionListener {
+                    var mp3 = MediaPlayer.create(context, sentenceAudio[2])
+                    mp3.start()
+                    mp3.setOnCompletionListener {
+                        var mp4 = MediaPlayer.create(context, sentenceAudio[3])
+                        mp4.start()
+                    }
+                }
+            }
+        }else{
+            Toast.makeText(context, "Check your work first please.", Toast.LENGTH_LONG).show()
+        }
+    }
+
     private fun playMessage(audio: Int, message: String){
         val mediaPlayer = MediaPlayer.create(context, audio)
         mediaPlayer.start()
+        mediaPlayer.setOnCompletionListener{
+
+        }
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 
@@ -89,37 +118,49 @@ class CheckGrammar(private val context: Context) {
      */
     fun resetPronoun() {
         symbolPronoun = SYMBOL_PRONOUN_RESET
+        isSentenceCorrect = false
     }
 
     fun resetVerb(){
         symbolVerb = SYMBOL_VERB_RESET
+        isSentenceCorrect = false
     }
 
     fun resetNoun(){
         symbolNoun = SYMBOL_NOUN_RESET
+        isSentenceCorrect = false
     }
 
     fun resetAdjective(){
         symbolAdjective = SYMBOL_ADJECTIVE_RESET
+        isSentenceCorrect = false
     }
 
     fun setPronoun(i: Int){
         val cardData = CardData()
         symbolPronoun = cardData.symbolsP[i]
+        sentenceAudio[0] = cardData.vocalsP[i]
+        isSentenceCorrect = false
     }
 
     fun setVerb(i: Int){
         val cardData = CardData()
         symbolVerb = cardData.symbolsV[i]
+        sentenceAudio[1] = cardData.vocalsV[i]
+        isSentenceCorrect = false
     }
 
     fun setNoun(i: Int){
         val cardData = CardData()
         symbolNoun = cardData.symbolsN[i]
+        sentenceAudio[2] = cardData.vocalsN[i]
+        isSentenceCorrect = false
     }
 
     fun setAdjective(i: Int){
         val cardData = CardData()
         symbolAdjective = cardData.symbolsA[i]
+        sentenceAudio[3] = cardData.vocalsA[i]
+        isSentenceCorrect = false
     }
 }
