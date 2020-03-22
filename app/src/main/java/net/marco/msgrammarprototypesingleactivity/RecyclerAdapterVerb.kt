@@ -28,7 +28,7 @@ class RecyclerAdapterVerb(listener: CardClick) : RecyclerView.Adapter<RecyclerAd
         viewHolder.itemImage.setImageResource(CardData.imagesV[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
-            cClick.onClickV(i)
+            cClick.onClickVerb(i)
         }
     }
 

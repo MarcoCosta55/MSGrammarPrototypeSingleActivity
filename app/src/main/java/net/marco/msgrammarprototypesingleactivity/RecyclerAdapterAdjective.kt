@@ -29,7 +29,7 @@ class RecyclerAdapterAdjective(listener: CardClick) : RecyclerView.Adapter<Recyc
         viewHolder.itemImage.setImageResource(CardData.imagesA[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
-            cClick.onClickA(i)
+            cClick.onClickAdjective(i)
         }
     }
 

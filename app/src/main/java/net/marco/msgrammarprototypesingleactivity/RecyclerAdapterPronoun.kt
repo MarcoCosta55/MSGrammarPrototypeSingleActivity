@@ -30,7 +30,7 @@ class RecyclerAdapterPronoun(listener: CardClick) : RecyclerView.Adapter<Recycle
         viewHolder.itemImage.setImageResource(CardData.imagesP[i])
         val imageItem = viewHolder.itemImage
         imageItem.setOnClickListener {
-            cClick.onClickP(i)
+            cClick.onClickPronoun(i)
         }
     }
 

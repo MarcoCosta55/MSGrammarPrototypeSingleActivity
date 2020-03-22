@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var checkWork = CheckWork()
+    private var checkWork = CheckWork(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), CardClick {
         setCardResetListeners()
 
         checkWorkButton.setOnClickListener {
-            checkWork.checkSentence()
+            checkWork.checkSentence(this)
         }
     }
 
@@ -80,45 +80,45 @@ class MainActivity : AppCompatActivity(), CardClick {
 
         imageViewPronoun.setOnClickListener{
             pronoun.setImageResource(R.drawable.outline_pronoun)
-            checkWork.symbolPronoun = checkWork.SYMBOL_PRONOUN_RESET
+            checkWork.resetPronoun()
         }
 
         imageViewVerb.setOnClickListener{
             verb.setImageResource(R.drawable.outline_verb1)
-            checkWork.symbolVerb = checkWork.SYMBOL_VERB_RESET
+            checkWork.resetVerb()
         }
 
         imageViewNoun.setOnClickListener{
             noun.setImageResource(R.drawable.outline_noun1)
-            checkWork.symbolNoun = checkWork.SYMBOL_NOUN_RESET
+            checkWork.resetNoun()
         }
 
         imageViewAdjective.setOnClickListener{
             adjective.setImageResource(R.drawable.outline_adjective1)
-            checkWork.symbolAdjective = checkWork.SYMBOL_ADJECTIVE_RESET
+            checkWork.resetAdjective()
         }
     }
 
     /**
      * these four functions override the CardClick interface
      */
-    override fun onClickP(i: Int) {
+    override fun onClickPronoun(i: Int) {
         pronoun.setImageResource(CardData.imagesP[i])
-        checkWork.symbolPronoun = CardData.symbolsP[i]
+        checkWork.setPronoun(i)
     }
 
-    override fun onClickV(i: Int) {
+    override fun onClickVerb(i: Int) {
         verb.setImageResource(CardData.imagesV[i])
-        checkWork.symbolVerb = CardData.symbolsV[i]
+        checkWork.setVerb(i)
     }
 
-    override fun onClickN(i: Int) {
+    override fun onClickNoun(i: Int) {
         noun.setImageResource(CardData.imagesN[i])
-        checkWork.symbolNoun = CardData.symbolsN[i]
+        checkWork.setNoun(i)
     }
 
-    override fun onClickA(i: Int) {
+    override fun onClickAdjective(i: Int) {
         adjective.setImageResource(CardData.imagesA[i])
-        checkWork.symbolAdjective = CardData.symbolsA[i]
+        checkWork.setAdjective(i)
     }
 }
