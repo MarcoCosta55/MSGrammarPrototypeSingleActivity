@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity(), CardClick {
         checkWorkButton.setOnClickListener {
             checkWork.checkSentence(this)
         }
+
+        readButton.setOnClickListener{
+
+        }
     }
 
     private fun setRecyclerViews(){

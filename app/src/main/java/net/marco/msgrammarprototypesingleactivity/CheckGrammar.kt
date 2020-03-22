@@ -28,6 +28,8 @@ class CheckGrammar(private val context: Context) {
     private val correctMessage = "Your sentence is correct!"
     private val errorMessage = "Check your sentence"
 
+    var isCorrect = false
+
     private var errorCount = 0
 
     private fun checkVerb(): Boolean {
@@ -43,6 +45,7 @@ class CheckGrammar(private val context: Context) {
         val isAdjectiveCorrect = checkAdjective()
 
         if(isVerbCorrect && isAdjectiveCorrect){
+            isCorrect = true
             errorCount = 0
             playMessage(correctAudio, correctMessage)
         }
