@@ -25,8 +25,6 @@ class CheckGrammar(private val context: Context) {
     private val errorAudioAdjective2 = R.raw.error_a2
     private val errorAudioAdjective3 = R.raw.error_a3
 
-    private var cardData = CardData()
-
     private val correctMessage = "Your sentence is correct!"
     private val errorMessage = "Check your sentence"
 
@@ -103,18 +101,22 @@ class CheckGrammar(private val context: Context) {
     }
 
     fun setPronoun(i: Int){
+        val cardData = CardData()
         symbolPronoun = cardData.symbolsP[i]
     }
 
     fun setVerb(i: Int){
+        val cardData = CardData()
         symbolVerb = cardData.symbolsV[i]
     }
 
     fun setNoun(i: Int){
+        val cardData = CardData()
         symbolNoun = cardData.symbolsN[i]
     }
 
     fun setAdjective(i: Int){
+        val cardData = CardData()
         symbolAdjective = cardData.symbolsA[i]
     }
 }

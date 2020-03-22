@@ -33,8 +33,6 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var cardData = CardData()
-
     private var checkWork = CheckGrammar(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -110,21 +108,25 @@ class MainActivity : AppCompatActivity(), CardClick {
      * these four functions override the CardClick interface
      */
     override fun onClickPronoun(i: Int) {
+        val cardData = CardData()
         pronoun.setImageResource(cardData.imagesP[i])
         checkWork.setPronoun(i)
     }
 
     override fun onClickVerb(i: Int) {
+        val cardData = CardData()
         verb.setImageResource(cardData.imagesV[i])
         checkWork.setVerb(i)
     }
 
     override fun onClickNoun(i: Int) {
+        val cardData = CardData()
         noun.setImageResource(cardData.imagesN[i])
         checkWork.setNoun(i)
     }
 
     override fun onClickAdjective(i: Int) {
+        val cardData = CardData()
         adjective.setImageResource(cardData.imagesA[i])
         checkWork.setAdjective(i)
     }
