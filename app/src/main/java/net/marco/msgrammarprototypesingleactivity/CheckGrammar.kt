@@ -39,7 +39,7 @@ class CheckGrammar(private val context: Context) {
     }
 
     private fun checkAdjective(): Boolean{
-        return symbolNoun[1] == symbolAdjective[0] && symbolNoun[2] == symbolAdjective[1]
+        return symbolNoun[1] == symbolAdjective[0] && (symbolNoun[2] == symbolAdjective[1] || symbolAdjective[1] == 'X')
     }
 
     fun checkSentence() {
