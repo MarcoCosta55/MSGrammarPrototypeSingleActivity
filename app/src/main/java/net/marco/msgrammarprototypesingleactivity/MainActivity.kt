@@ -89,17 +89,17 @@ class MainActivity : AppCompatActivity(), CardClick {
         }
 
         imageViewVerb.setOnClickListener{
-            verb.setImageResource(R.drawable.outline_verb1)
+            verb.setImageResource(R.drawable.outline_verb)
             checkWork.resetVerb()
         }
 
         imageViewNoun.setOnClickListener{
-            noun.setImageResource(R.drawable.outline_noun1)
+            noun.setImageResource(R.drawable.outline_noun)
             checkWork.resetNoun()
         }
 
         imageViewAdjective.setOnClickListener{
-            adjective.setImageResource(R.drawable.outline_adjective1)
+            adjective.setImageResource(R.drawable.outline_adjective)
             checkWork.resetAdjective()
         }
     }
