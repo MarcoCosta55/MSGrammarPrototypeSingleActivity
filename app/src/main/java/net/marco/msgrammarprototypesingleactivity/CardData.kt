@@ -1,32 +1,10 @@
 package net.marco.msgrammarprototypesingleactivity
 
-import androidx.core.util.rangeTo
-
 /**
- * This class is a simple data helper class.
+ * This is a simple data helper class.
  * It will be replaced by a database in the full version of the app.
  */
 class CardData {
-
-    /**
-     * Data for proper noun cards.
-     */
-    val imagesPN = intArrayOf(
-        R.drawable.card_pn_luis,
-        R.drawable.card_pn_tomas,
-        R.drawable.card_pn_monica,
-        R.drawable.card_pn_luis_monica,
-        R.drawable.card_pn_monica_rosa,
-        R.drawable.card_pn_tomas_luis
-    )
-    val symbolsPN = arrayOf(
-        "3SM",
-        "3SM",
-        "3SF",
-        "3PM",
-        "3PF",
-        "3PM"
-    )
 
     /**
      * data for pronoun cards
@@ -46,6 +24,22 @@ class CardData {
         R.drawable.card_p_ellas,
         R.drawable.card_p_ustedesf,
         R.drawable.card_p_ustedesm
+    )
+    val vocalsP = intArrayOf(
+        R.raw.yo,
+        R.raw.yo,
+        R.raw.tu,
+        R.raw.tu,
+        R.raw.el,
+        R.raw.ella,
+        R.raw.usted,
+        R.raw.usted,
+        R.raw.nosotros,
+        R.raw.nosotras,
+        R.raw.ellos,
+        R.raw.ellas,
+        R.raw.ustedes,
+        R.raw.ustedes
     )
     val symbolsP = arrayOf(
         "1SF",
@@ -79,6 +73,18 @@ class CardData {
         R.drawable.card_v_cortamos,
         R.drawable.card_v_cortan
     )
+    val vocalsV = intArrayOf(
+        R.raw.como,
+        R.raw.comes,
+        R.raw.come,
+        R.raw.comemos,
+        R.raw.comen,
+        R.raw.corto,
+        R.raw.cortas,
+        R.raw.corta,
+        R.raw.cortamos,
+        R.raw.cortan
+    )
     val symbolsV = arrayOf(
         "1S",
         "2S",
@@ -106,6 +112,18 @@ class CardData {
         R.drawable.card_n_pera,
         R.drawable.card_n_pollo,
         R.drawable.card_n_uvas
+    )
+    val vocalsN = intArrayOf(
+        R.raw.durazno,
+        R.raw.ensalada,
+        R.raw.fresas,
+        R.raw.mango,
+        R.raw.manzana,
+        R.raw.naranja,
+        R.raw.pan,
+        R.raw.pera,
+        R.raw.pollo,
+        R.raw.uvas
     )
     val symbolsN = arrayOf(
         "3SM",
@@ -148,6 +166,32 @@ class CardData {
         R.drawable.card_a_sucios,
         R.drawable.card_a_verde,
         R.drawable.card_a_verdes
+    )
+    val vocalsA = intArrayOf(
+        R.raw.fria,
+        R.raw.frias,
+        R.raw.frio,
+        R.raw.frios,
+        R.raw.grande,
+        R.raw.grandes,
+        R.raw.limpia,
+        R.raw.limpias,
+        R.raw.limpio,
+        R.raw.limpios,
+        R.raw.pequena,
+        R.raw.pequenas,
+        R.raw.pequeno,
+        R.raw.pequenos,
+        R.raw.roja,
+        R.raw.rojas,
+        R.raw.rojo,
+        R.raw.rojos,
+        R.raw.sucia,
+        R.raw.sucias,
+        R.raw.sucio,
+        R.raw.sucios,
+        R.raw.verde,
+        R.raw.verdes
     )
     val symbolsA = arrayOf(
         "SF",
