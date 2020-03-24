@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), CardClick {
     private lateinit var noun: ImageView
     private lateinit var adjective: ImageView
 
-    private var checkWork = CheckGrammar(this)
+    private var checkWork = CardChecker(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 

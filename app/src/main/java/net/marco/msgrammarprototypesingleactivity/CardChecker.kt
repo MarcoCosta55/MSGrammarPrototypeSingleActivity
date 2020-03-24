@@ -4,7 +4,7 @@ import android.content.Context
 import android.media.MediaPlayer
 import android.widget.Toast
 
-class CheckGrammar(private val context: Context) {
+class CardChecker(private val context: Context) {
 
     private val SYMBOL_PRONOUN_RESET = "PPP"
     private val SYMBOL_VERB_RESET = "VV"
@@ -86,15 +86,15 @@ class CheckGrammar(private val context: Context) {
     fun playSentence(){
         if(isSentenceCorrect){
             var mp1 = MediaPlayer.create(context, sentenceAudio[0])
+            var mp2 = MediaPlayer.create(context, sentenceAudio[1])
+            var mp3 = MediaPlayer.create(context, sentenceAudio[2])
+            var mp4 = MediaPlayer.create(context, sentenceAudio[3])
             mp1.start()
             mp1.setOnCompletionListener{
-                var mp2 = MediaPlayer.create(context, sentenceAudio[1])
                 mp2.start()
                 mp2.setOnCompletionListener {
-                    var mp3 = MediaPlayer.create(context, sentenceAudio[2])
                     mp3.start()
                     mp3.setOnCompletionListener {
-                        var mp4 = MediaPlayer.create(context, sentenceAudio[3])
                         mp4.start()
                     }
                 }
