@@ -169,6 +169,7 @@
         android:layout_width="0dp"
         android:layout_height="8dp"
         android:background="#000000"
+        android:elevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerViewPronoun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
