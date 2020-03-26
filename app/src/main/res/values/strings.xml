@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MSGrammarPrototypeSingleActivity</string>
+    <string name="app_name">MS Grammar Prototype</string>
 
     <string name="pronoun_description">This is a single Pronoun Card</string>
     <string name="verb_description">This is a single Verb Card</string>
