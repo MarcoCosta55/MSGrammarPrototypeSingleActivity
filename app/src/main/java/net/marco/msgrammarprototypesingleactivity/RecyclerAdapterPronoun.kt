@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 Marco Costa
+ * Copyright 2020 Marco Costa.
  */
 package net.marco.msgrammarprototypesingleactivity
 

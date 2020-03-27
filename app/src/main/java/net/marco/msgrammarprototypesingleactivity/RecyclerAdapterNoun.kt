@@ -1,8 +1,8 @@
+/**
+ * Copyright 2020 Marco Costa.
+ */
 package net.marco.msgrammarprototypesingleactivity
 
-/**
- * Copyright 2020 Marco Costa
- */
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
