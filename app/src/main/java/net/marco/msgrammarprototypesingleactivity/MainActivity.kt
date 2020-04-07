@@ -5,6 +5,7 @@ package net.marco.msgrammarprototypesingleactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -48,9 +49,15 @@ class MainActivity : AppCompatActivity(), CardClick {
 
         setCardResetListeners()
 
-        checkWorkButton.setOnClickListener {
+        readButton.visibility = View.INVISIBLE
+        checkWorkButton.visibility = View.VISIBLE
+
+        checkWorkButton.setOnClickListener{
             checkWork.checkSentence()
+            buttonSwitch()
         }
+
+
 
         readButton.setOnClickListener{
             checkWork.playSentence()
@@ -89,21 +96,37 @@ class MainActivity : AppCompatActivity(), CardClick {
         imageViewPronoun.setOnClickListener{
             pronoun.setImageResource(R.drawable.outline_pronoun)
             checkWork.resetPronoun()
+            buttonSwitch()
         }
 
         imageViewVerb.setOnClickListener{
             verb.setImageResource(R.drawable.outline_verb)
             checkWork.resetVerb()
+            buttonSwitch()
         }
 
         imageViewNoun.setOnClickListener{
             noun.setImageResource(R.drawable.outline_noun)
             checkWork.resetNoun()
+            buttonSwitch()
         }
 
         imageViewAdjective.setOnClickListener{
             adjective.setImageResource(R.drawable.outline_adjective)
             checkWork.resetAdjective()
+            buttonSwitch()
+        }
+    }
+
+    private fun buttonSwitch(){
+        if(checkWork.isSentenceCorrect)
+        {
+            readButton.visibility = View.VISIBLE
+            checkWorkButton.visibility = View.INVISIBLE
+        }
+        else {
+            readButton.visibility = View.INVISIBLE
+            checkWorkButton.visibility = View.VISIBLE
         }
     }
 
@@ -114,23 +137,28 @@ class MainActivity : AppCompatActivity(), CardClick {
         val cardData = CardData()
         pronoun.setImageResource(cardData.imagesP[i])
         checkWork.setPronoun(i)
+        buttonSwitch()
     }
 
     override fun onClickVerb(i: Int) {
         val cardData = CardData()
         verb.setImageResource(cardData.imagesV[i])
         checkWork.setVerb(i)
+        buttonSwitch()
     }
 
     override fun onClickNoun(i: Int) {
         val cardData = CardData()
         noun.setImageResource(cardData.imagesN[i])
         checkWork.setNoun(i)
+        buttonSwitch()
     }
 
     override fun onClickAdjective(i: Int) {
         val cardData = CardData()
         adjective.setImageResource(cardData.imagesA[i])
         checkWork.setAdjective(i)
+        buttonSwitch()
+
     }
 }

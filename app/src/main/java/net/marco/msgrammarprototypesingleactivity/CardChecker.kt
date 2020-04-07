@@ -102,8 +102,6 @@ class CardChecker(private val context: Context) {
                     }
                 }
             }
-        }else{
-            Toast.makeText(context, "Check your work first please.", Toast.LENGTH_LONG).show()
         }
     }
 

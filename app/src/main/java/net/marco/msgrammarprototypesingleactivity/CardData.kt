@@ -65,6 +65,11 @@ class CardData {
      * Data for verb cards.
      */
     val imagesV = intArrayOf(
+        R.drawable.card_v_lavo,
+        R.drawable.card_v_lavas,
+        R.drawable.card_v_lava,
+        R.drawable.card_v_lavamos,
+        R.drawable.card_v_lavan,
         R.drawable.card_v_como,
         R.drawable.card_v_comes,
         R.drawable.card_v_come,
@@ -77,6 +82,11 @@ class CardData {
         R.drawable.card_v_cortan
     )
     val vocalsV = intArrayOf(
+        R.raw.lavo,
+        R.raw.lavas,
+        R.raw.lava,
+        R.raw.lavamos,
+        R.raw.lavan,
         R.raw.como,
         R.raw.comes,
         R.raw.come,
@@ -89,6 +99,11 @@ class CardData {
         R.raw.cortan
     )
     val symbolsV = arrayOf(
+        "1S",
+        "2S",
+        "3S",
+        "1P",
+        "3P",
         "1S",
         "2S",
         "3S",

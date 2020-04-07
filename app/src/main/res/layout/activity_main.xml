@@ -161,7 +161,7 @@
         app:backgroundTint="#FF9800"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/checkWorkButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     <View
