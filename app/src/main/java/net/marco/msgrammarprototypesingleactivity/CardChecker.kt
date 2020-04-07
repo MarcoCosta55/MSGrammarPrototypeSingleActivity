@@ -108,9 +108,6 @@ class CardChecker(private val context: Context) {
     private fun playMessage(audio: Int, message: String){
         val mediaPlayer = MediaPlayer.create(context, audio)
         mediaPlayer.start()
-        mediaPlayer.setOnCompletionListener{
-
-        }
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 
