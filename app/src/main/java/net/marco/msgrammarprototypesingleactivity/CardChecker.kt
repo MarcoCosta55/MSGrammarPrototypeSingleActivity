@@ -32,6 +32,7 @@ class CardChecker(private val context: Context) {
     private val errorMessage = "Check your sentence"
 
     private var sentenceAudio = intArrayOf(0,0,0,0)
+    private var mediaPlayer: MediaPlayer? = null
 
     var isSentenceCorrect = false
 
@@ -86,19 +87,32 @@ class CardChecker(private val context: Context) {
         }
     }
 
-    fun playSentence(){
-        if(isSentenceCorrect){
-            var mp1 = MediaPlayer.create(context, sentenceAudio[0])
-            var mp2 = MediaPlayer.create(context, sentenceAudio[1])
-            var mp3 = MediaPlayer.create(context, sentenceAudio[2])
-            var mp4 = MediaPlayer.create(context, sentenceAudio[3])
-            mp1.start()
-            mp1.setOnCompletionListener{
-                mp2.start()
-                mp2.setOnCompletionListener {
-                    mp3.start()
-                    mp3.setOnCompletionListener {
-                        mp4.start()
+    fun playSentence() {
+
+        if (mediaPlayer != null) {
+            mediaPlayer?.stop()
+            mediaPlayer?.reset()
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+        if (isSentenceCorrect) {
+            mediaPlayer = MediaPlayer.create(context, sentenceAudio[0])
+            mediaPlayer?.start()
+            mediaPlayer?.setOnCompletionListener{
+                mediaPlayer?.stop()
+                mediaPlayer?.reset()
+                mediaPlayer = MediaPlayer.create(context, sentenceAudio[1])
+                mediaPlayer?.start()
+                mediaPlayer?.setOnCompletionListener {
+                    mediaPlayer?.stop()
+                    mediaPlayer?.reset()
+                    mediaPlayer = MediaPlayer.create(context, sentenceAudio[2])
+                    mediaPlayer?.start()
+                    mediaPlayer?.setOnCompletionListener {
+                        mediaPlayer?.stop()
+                        mediaPlayer?.reset()
+                        mediaPlayer = MediaPlayer.create(context, sentenceAudio[3])
+                        mediaPlayer?.start()
                     }
                 }
             }
@@ -106,8 +120,14 @@ class CardChecker(private val context: Context) {
     }
 
     private fun playMessage(audio: Int, message: String){
-        val mediaPlayer = MediaPlayer.create(context, audio)
-        mediaPlayer.start()
+        if(mediaPlayer != null){
+            mediaPlayer?.stop()
+            mediaPlayer?.reset()
+            mediaPlayer?.release()
+            mediaPlayer = null
+        }
+        mediaPlayer = MediaPlayer.create(context, audio)
+        mediaPlayer?.start()
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 
