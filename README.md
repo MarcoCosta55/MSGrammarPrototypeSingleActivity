@@ -2,7 +2,7 @@
 # MontessoriSpanish Sentence App
 Copyright 2020 Marco Costa
 ## Single Sentence Prototype
-![appscreenshot.png](appscreenshot.png)
+![Single Activity Prototype](appscreenshot.png)
 
 This application is a proof of concept prototype. It is one activity in a  
 much larger Mobile-Assisted Language Learning (MALL) tool designed for  
