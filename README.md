@@ -1,6 +1,7 @@
 
 # MontessoriSpanish Sentence App
 Copyright 2020 Marco Costa
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Single Sentence Prototype
 ![Single Activity Prototype](appscreenshot.png)
 
@@ -38,8 +39,15 @@ You first need to temporarily allow Chrome to install apk files.
 Now install the MontessoriSpanish Sentence Prototype App
 1. Navigate to this page on the Chrome browser on your Android device.
 2. Touch the following link: [APK Download](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/raw/master/app-debug.apk)
-3. 
+3. Chrome will display a warning message. Touch "OK".
+4. After the APK is downloaded touch "Open" in the dialog on the bottom of the screen.
+5. Touch "Install".
+6. The app is now install, but YOU STILL NEED TO DO A FEW MORE STEPS.
 
-
+DON'T FORGET TO RETURN CHROME PERMISSIONS TO NORMAL.
+1. Navigate to Settings > Apps > Chrome.
+2. Under the "Advanced" section touch "Install Unknown Apps".
+3. Switch "Allow from this source" on.
+4. Exit out of settings.
 
 ### PC Installation
