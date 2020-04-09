@@ -27,4 +27,8 @@ as well as the development process for this tool:
 
 ### Android Installation
 
+1. Navigate to this page from your Chrome browser on your Android device.
+2. Next click the following link: [APK Download](app-debug.apk)
+
+
 ### PC Installation
