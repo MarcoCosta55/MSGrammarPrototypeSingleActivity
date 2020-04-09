@@ -23,7 +23,7 @@ You can watch the following videos to understand the pedagogical foundation as w
 
 ## Installation Instructions
 
-### Android Installation
+## Android Installation
 
 **You first need to temporarily allow Chrome to install apk files.**
 1. Navigate to Settings > Apps > Chrome.
@@ -45,4 +45,4 @@ You can watch the following videos to understand the pedagogical foundation as w
 3. Switch "Allow from this source" on.
 4. Exit out of settings.
 
-### PC Installation
+## PC Installation
