@@ -1,16 +1,13 @@
 
 # MontessoriSpanish Sentence App
-Copyright 2020 Marco Costa
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright 2020 Marco Costa  
+THIs SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Single Sentence Prototype
 ![Single Activity Prototype](appscreenshot.png)
 
-This application is a proof of concept prototype. It is one activity in a  
-much larger Mobile-Assisted Language Learning (MALL) tool designed for  
-self-guided Second Language (L2) grammar practice in Montessori elementary schools.
+This application is a proof of concept prototype. It is one activity in a much larger Mobile-Assisted Language Learning (MALL) tool designed for self-guided Second Language (L2) grammar practice in Montessori elementary schools.
 
-You can watch the following videos to understand the pedagogical foundation  
-as well as the development process for this tool:
+You can watch the following videos to understand the pedagogical foundation as well as the development process for this tool:
 - [Pedagogy](https://youtu.be/6Me3dQJOzdc)
 - [Activity structure and design](https://youtu.be/5dAVgHNxMhE)
 - [Alpha Overview](https://youtu.be/fsCOiN2IWfc)
