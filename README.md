@@ -22,6 +22,7 @@ You can watch the following videos to understand the pedagogical foundation as w
 
 
 ## Installation Instructions
+Your can either install this app on an Android Tablet or use the free Android Emulator "BlueStacks" to run it on Windows/Mac.
 
 ## Android Installation
 
