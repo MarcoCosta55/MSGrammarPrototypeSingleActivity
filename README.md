@@ -32,7 +32,7 @@ Your can either install this app on an Android Tablet or use the free Android Em
 3. Switch "Allow from this source" on.
 4. Exit out of settings.
 
-**Now install the MontessoriSpanish Sentence Prototype App**
+**Now install the MontessoriSpanish Sentence Prototype App.**
 1. Navigate to this page on the Chrome browser on your Android device.
 2. Touch the following link: [**APK Download**](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/raw/master/app-debug.apk)
 3. Chrome will display a warning message. Touch "OK".
