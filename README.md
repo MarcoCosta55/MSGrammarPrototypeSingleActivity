@@ -2,16 +2,16 @@
 # MontessoriSpanish Sentence App
 Copyright 2020 Marco Costa
 ## Single Sentence Prototype
+
 This application is a proof of concept prototype. It is one activity in  
-a much larger Mobile- Assisted Language Learning (MALL) tool designed for  
-self-guided Spanish grammar practice in Montessori elementary schools.
+a much larger Mobile-Assisted Language Learning (MALL) tool designed for  
+self-guided Second Language (L2) grammar practice in Montessori elementary schools.
 
-The following videos describe the pedagogical foundation as well as the
-development process for this tool:
-
-- Pedagogy:
-- Activity structure and design:
-- Alpha Overview:
+You can watch the following videos to understand the pedagogical foundation  
+as well as the development process for this tool:
+- [Pedagogy](https://youtu.be/6Me3dQJOzdc)
+- [Activity structure and design](https://youtu.be/5dAVgHNxMhE)
+- [Alpha Overview](https://youtu.be/fsCOiN2IWfc)
 - Beta Overview:
 
 ### Tools:
