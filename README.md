@@ -27,8 +27,19 @@ as well as the development process for this tool:
 
 ### Android Installation
 
-1. Navigate to this page from your Chrome browser on your Android device.
-2. Click the following link: [APK Download](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/raw/master/app-debug.apk)
+FOLLOW EVERY STEP IN THIS INSTALLATION.
+
+You first need to temporarily allow Chrome to install apk files.
+1. Navigate to Settings > Apps > Chrome.
+2. Under the "Advanced" section touch "Install Unknown Apps".
+3. Switch "Allow from this source" on.
+4. Exit out of settings.
+
+Now install the MontessoriSpanish Sentence Prototype App
+1. Navigate to this page on the Chrome browser on your Android device.
+2. Touch the following link: [APK Download](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/raw/master/app-debug.apk)
+3. 
+
 
 
 ### PC Installation
