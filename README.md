@@ -52,7 +52,7 @@ NOTE FOR OLDER VERSIONS OF ANDROID: This option can be found under Settings > Se
 
 ### PC Installation
 ***
-The following instructions are for installing the BlueStacks 4 Android emulator for Windows 10. However, similar steps can be taken to run the app on Mac. I have not tested this program extensively, nor do I endorse its use. This is just the easiest way I've found to run my app without an Android device.
+The following instructions are for installing the BlueStacks 4 Android emulator for Windows 10. This app is also available on Mac. I have not tested this program extensively, nor do I endorse its use. This is just the easiest way I've found to run my app without an Android device.
 
 1. Download the BlueStacks installer from [**BlueStacks.com**](https://www.bluestacks.com/)
 2. Run the BlueStacks Installer exe file you just downloaded.
