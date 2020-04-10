@@ -22,9 +22,11 @@ You can watch the following videos to understand the pedagogical foundation as w
 
 
 ## Installation Instructions
-Your can either install this app on an Android Tablet or use the free Android Emulator "BlueStacks" to run it on Windows/Mac.
+Your can either install this app on an Android Tablet or if you have no access to an Android device you can use the free Android Emulator "BlueStacks" to run it on Windows/Mac.
 
-## Android Installation
+### Android Installation
+***
+Sideloading an Android app from your Chrome browser is pretty straightforward. Just remember to follow **all** the steps listed below.
 
 **You first need to temporarily allow Chrome to install apk files.**
 1. Navigate to Settings > Apps > Chrome.
@@ -32,18 +34,37 @@ Your can either install this app on an Android Tablet or use the free Android Em
 3. Switch "Allow from this source" on.
 4. Exit out of settings.
 
+NOTE FOR OLDER VERSIONS OF ANDROID: This option can be found under Settings > Security.
+
 **Now install the MontessoriSpanish Sentence Prototype App.**
-1. Navigate to this page on the Chrome browser on your Android device.
+1. Navigate to this page in the Chrome browser on your Android device.
 2. Touch the following link: [**APK Download**](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/raw/master/app-debug.apk)
 3. Chrome will display a warning message. Touch "OK".
-4. After the APK is downloaded touch "Open" in the dialog on the bottom of the screen.
+4. After the APK is downloaded, touch "Open" in the dialog on the bottom of the screen.
 5. Touch "Install".
-6. The app is now install, but YOU STILL NEED TO DO A FEW MORE STEPS.
+6. The app is now installed, but you still need to complete a few more steps.
 
-**DON'T FORGET TO RETURN CHROME PERMISSIONS TO NORMAL.**
+**Finally, return Chrome back to its original settings.**
 1. Navigate to Settings > Apps > Chrome.
 2. Under the "Advanced" section touch "Install Unknown Apps".
 3. Switch "Allow from this source" on.
 4. Exit out of settings.
 
-## PC Installation
+### PC Installation
+***
+The following instructions are for installing the BlueStacks 4 Android emulator for Windows 10. However, similar steps can be taken to run the app on Mac. I have not tested this program extensively, nor do I endorse its use. This is just the easiest way I've found to run my app without an Android device.
+
+1. Download the BlueStacks installer from [**BlueStacks.com**](https://www.bluestacks.com/)
+2. Run the BlueStacks Installer exe file you just downloaded.
+3. If prompted, click "Yes" to let BlueStacks make changes on your device.
+4. Click "Install Now".
+5. While BlueStacks is installing, [**click here**](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/raw/master/app-debug.apk) to download the MontessoriSpanish grammar app apk file.
+6. When BlueStacks is done installing, it will ask you to sign into Google Play. Click "I'll do it later".
+7. Hover over the three dot kebab menu on the home screen. It's in the top left section of the page right next to "Installed apps".
+8. Click on "Install apk".
+9. Navigate to MontessoriSpanish grammar app apk that you downloaded in step 5, and select "open".
+10. Once the app is installed, click the hamburger menu in the top right menu bar and select "Settings".
+11. In the "Display" setting, change the orientation from "landscape" to "portrait".
+12. Select okay to restart BlueStacks.
+13. The MontessoriSpanish Sentence Prototype App should now be ready to use. Enjoy!
+
