@@ -34,7 +34,7 @@ Sideloading an Android app from your Chrome browser is pretty straightforward. J
 3. Switch "Allow from this source" on.
 4. Exit out of settings.
 
-NOTE FOR OLDER VERSIONS OF ANDROID: This option can be found under Settings > Security.
+NOTE FOR OLDER VERSIONS OF ANDROID: This option can be found under Settings > Security > Unknown Sources.
 
 **Now install the MontessoriSpanish Sentence Prototype App.**
 1. Navigate to this page in the Chrome browser on your Android device.
