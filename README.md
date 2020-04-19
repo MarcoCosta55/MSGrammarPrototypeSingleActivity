@@ -54,7 +54,7 @@ NOTE FOR OLDER VERSIONS OF ANDROID: This option can be found under Settings > Se
 **Finally, return Chrome back to its original settings.**
 1. Navigate to Settings > Apps > Chrome.
 2. Under the "Advanced" section touch "Install Unknown Apps".
-3. Switch "Allow from this source" on.
+3. Switch "Allow from this source" off.
 4. Exit out of settings.
 
 ### PC Installation
