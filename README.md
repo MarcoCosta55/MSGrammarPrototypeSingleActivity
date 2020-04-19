@@ -25,6 +25,7 @@ If you wish to gain a deeper understanding of the pedagogical foundation for thi
 - Git - VCS
 - Gradle - Build Automation & Dependency Management
 - PhotoShop - Asset Design
+- Audacity - Audio Recording
 
 
 ## Installation Instructions
