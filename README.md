@@ -9,6 +9,7 @@ This application is a proof of concept prototype. It is one activity in a much l
 
 You can watch my final project presentation here:
 - [**Final Presentation**](https://youtu.be/ioAMmT0AJhk)
+
 You can read my final project paper here:
 - [**Final Paper**](https://)
 
