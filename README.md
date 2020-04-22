@@ -18,7 +18,7 @@ This application is a proof of concept prototype. It is one activity in a much l
 - [**Alpha Overview**](https://youtu.be/fsCOiN2IWfc)
 
 
-### Built With:
+## Built With:
 - Android Studio 3.6 - IDE
 - Kotlin 1.3 - Language
 - Git - VCS
