@@ -10,7 +10,7 @@ This application is a proof of concept prototype. It is one activity in a much l
 ### You can watch my final project presentation here:
  - [**Final Presentation**](https://youtu.be/ioAMmT0AJhk)
 ### You can read my final project paper here:
- - [**Final Paper**](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/blob/master/CS6460_FInal_Paper.pdf)
+ - [**Final Paper**](https://github.com/MarcoCosta55/MSGrammarPrototypeSingleActivity/blob/master/CS6460_Final_Paper.pdf)
 
 **If you wish to gain a deeper understanding of the pedagogical foundation for this tool or how the development process went, the following videos may be of interest:**
 - [**Overview of Pedagogy**](https://youtu.be/6Me3dQJOzdc)
