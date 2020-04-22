@@ -7,13 +7,13 @@ THIs SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPL
 
 This application is a proof of concept prototype. It is one activity in a much larger Mobile-Assisted Language Learning (MALL) tool designed for self-guided Second Language (L2) grammar practice in Montessori elementary schools.
 
-You can watch my final project presentation here:
+#### You can watch my final project presentation here:
 - [**Final Presentation**](https://youtu.be/ioAMmT0AJhk)
 
-You can read my final project paper here:
+#### You can read my final project paper here:
 - [**Final Paper**](https://)
 
-If you wish to gain a deeper understanding of the pedagogical foundation for this tool or how the development process went, the following videos may be of interest:
+**If you wish to gain a deeper understanding of the pedagogical foundation for this tool or how the development process went, the following videos may be of interest:**
 - [**Overview of Pedagogy**](https://youtu.be/6Me3dQJOzdc)
 - [**Activity structure and design**](https://youtu.be/5dAVgHNxMhE)
 - [**Alpha Overview**](https://youtu.be/fsCOiN2IWfc)
